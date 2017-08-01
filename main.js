@@ -307,9 +307,9 @@ $("#search-button").on("click", function() {
             zipCode = response.events[0].venue.postal_code;
             console.log(zipCode);
             console.log(hotelArea);
-            date = moment(response.events[0].datetime_local).subtract(1, "days").format('YYYY-MM-DD');
+            date = moment(response.events[0].datetime_local).subtract(1, "days").format('MMM Do YY');
             params.request.slice[0].date = date;
-            fReturn = moment(response.events[0].datetime_local).add(1, "days").format('YYYY-MM-DD');
+            fReturn = moment(response.events[0].datetime_local).add(3, "days").format('YYYY-MM-DD');
             params.request.slice[1].date = fReturn;
             console.log(date)
 
